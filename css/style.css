@@ -386,10 +386,10 @@ html,body{
 }
 
 /* Show close button when navbar is open */
-.menu-toggle:checked ~ #close {
+.menu-toggle:checked ~ #close,
+.menu-toggle:checked + #close {
   display: block;
 }
-
 /* Hide menu icon when navbar is open */
 .menu-toggle:checked ~ #mobile {
   display: none;
@@ -407,11 +407,13 @@ html,body{
     right: -300px;
     height: 100vh;
     width: 200px;
-    background-color: #313131;
+    background-color: #dfdfdf;
     box-shadow: 0 50px 70px rgba(0, 0, 0, 0.2);
     padding: 80px 0 0 10px;
     transition: 0.3s;
     overflow: hidden;
+    font-family: intel one mono;
+    color: #1e1e1e;
   }
   #navbar button:hover {
     transform: scale(1.05) translateZ(0);
@@ -1412,4 +1414,350 @@ footer {
     border-radius: 20px 5px 0 0 / 5px 20px 0 0;
     text-align: center;
     position: relative;
+}
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+/* These queries will make your site responsive without changing existing styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .skills-grid {
+    padding: 4rem 6rem;
+  }
+  
+  .aboutblock .pic1,
+  .aboutmeblock .pic1 {
+    width: 450px;
+    height: 550px;
+  }
+  
+  .aboutblock p,
+  .aboutmeblock p {
+    width: 450px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #header {
+    padding: 5px 20px;
+  }
+  
+  .section-p1 {
+    padding: 30px 40px;
+  }
+  
+  .skills-grid {
+    padding: 4rem 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .aboutblock,
+  .aboutmeblock {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .aboutblock .pt2,
+  .aboutmeblock .pt2 {
+    align-items: center;
+  }
+  
+  .aboutblock h3,
+  .aboutblock h4,
+  .aboutblock p,
+  .aboutmeblock h3,
+  .aboutmeblock h4,
+  .aboutmeblock p {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .aboutblock .lm1,
+  .aboutmeblock .lm1 {
+    margin-left: 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  #welcome {
+    background-size: 70%;
+  }
+  
+  .adv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #header {
+    padding: 5px 15px;
+  }
+  
+  .section-p1 {
+    padding: 20px 20px;
+  }
+  
+  .clrs {
+    font-size: 32px;
+  }
+  
+  .skills-grid {
+    padding: 3rem 1.5rem;
+  }
+  
+  .aboutblock .pic1,
+  .aboutmeblock .pic1 {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+  
+  .aboutblock p,
+  .aboutmeblock p {
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .aboutblock h3,
+  .aboutmeblock h3 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 30px;
+  }
+  
+  .aboutblock h4,
+  .aboutmeblock h4 {
+    font-size: 18px;
+  }
+  
+  .sec-heading {
+    font-size: 32px;
+  }
+  
+  .skills-heading {
+    font-size: 32px;
+  }
+  
+  #welcome {
+    background-size: 80%;
+    height: 70vh;
+  }
+  
+  .adv-grid {
+    grid-template-columns: 1fr;
+    margin-top: -50px;
+  }
+  
+  .adv-grid .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #header {
+    padding: 5px 10px;
+  }
+  
+  .section-p1 {
+    padding: 15px 15px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-top: 5px;
+  }
+  
+  .clrs {
+    font-size: 28px;
+  }
+  
+  .skills-grid {
+    padding: 2rem 1rem;
+  }
+  
+  .aboutblock h3,
+  .aboutmeblock h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .aboutblock h4,
+  .aboutmeblock h4 {
+    font-size: 16px;
+  }
+  
+  .sec-heading {
+    font-size: 28px;
+  }
+  
+  .skills-heading {
+    font-size: 28px;
+  }
+  
+  #welcome {
+    background-size: 90%;
+    height: 60vh;
+  }
+  
+  .adv__container {
+    padding-top: 4rem;
+  }
+  
+  .adv-grid {
+    gap: 15px;
+    margin-top: -30px;
+  }
+  
+  .adv-grid .card {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+  }
+  
+  .adv-grid .card h3 {
+    font-size: 14px;
+  }
+  
+  .adv-grid .card p {
+    font-size: 12px;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-heading {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile navigation adjustments */
+  #navbar {
+    width: 180px;
+  }
+  
+  #navbar li {
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust bouncing element position */
+  .bounce-element {
+    top: 15%;
+    left: 38%;
+  }
+}
+
+/* Very small devices (less than 400px) */
+@media (max-width: 399.98px) {
+  .clrs {
+    font-size: 24px;
+  }
+  
+  .aboutblock h3,
+  .aboutmeblock h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .sec-heading {
+    font-size: 24px;
+  }
+  
+  .skills-heading {
+    font-size: 24px;
+  }
+  
+  #welcome {
+    background-size: 95%;
+    height: 50vh;
+  }
+  
+  .adv-grid .card {
+    max-width: 250px;
+  }
+  
+  .btns {
+    width: 200px;
+    padding: 8px;
+  }
+  
+  .btns p {
+    font-size: 22px;
+  }
+  
+  .btns h4 {
+    font-size: 14px;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .form-heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  #welcome {
+    height: 100vh;
+    background-size: 30%;
+  }
+  
+  .section-p1 {
+    padding: 20px 40px;
+  }
+}
+
+/* High-resolution devices */
+@media (min-resolution: 192dpi) {
+  #welcome {
+    background-size: contain;
+  }
+}
+
+/* Print styles */
+@media print {
+  #header,
+  #navbar,
+  .bounce-element,
+  .adv__container,
+  .contact-form {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .section-p1 {
+    padding: 0;
+    margin: 0;
+  }
 }
